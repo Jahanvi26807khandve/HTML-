@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Munna Bhai MBBS Fan Page</title>
+
+
+    <style>
+
+        /* =========================
+           BASIC RESET
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+            font-family: Arial, sans-serif;
+
+            background-color: #fff7ed;
+
+            color: #2b1a12;
+        }
+
+
+        /* =========================
+           HERO SECTION
+        ========================= */
+
+        .hero {
+
+            min-height: 650px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-around;
+
+            padding: 60px 8%;
+
+            background: linear-gradient(
+                135deg,
+                #ff6b1a,
+                #ff9f43
+            );
+
+        }
+
+
+        .hero-text {
+
+            width: 45%;
+        }
+
+
+        .small-title {
+
+            font-size: 18px;
+
+            font-weight: bold;
+
+            text-transform: uppercase;
+
+            letter-spacing: 3px;
+
+            color: white;
+
+            margin-bottom: 15px;
+        }
+
+
+        .hero h1 {
+
+            font-size: 60px;
+
+            line-height: 1;
+
+            color: white;
+
+            text-transform: uppercase;
+
+            text-shadow: 4px 4px 0px #8b2f00;
+
+            margin-bottom: 25px;
+        }
+
+
+        .hero h2 {
+
+            font-size: 27px;
+
+            line-height: 1.4;
+
+            color: white;
+
+            margin-bottom: 20px;
+        }
+
+
+        .intro {
+
+            font-size: 17px;
+
+            line-height: 1.7;
+
+            color: white;
+
+            margin-bottom: 30px;
+        }
+
+
+        /* =========================
+           BUTTON
+        ========================= */
+
+        .explore-btn {
+
+            display: inline-block;
+
+            padding: 13px 25px;
+
+            background-color: #2b1a12;
+
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 30px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+
+        .explore-btn:hover {
+
+            background-color: white;
+
+            color: #2b1a12;
+
+            transform: translateY(-3px);
+        }
+
+
+        /* =========================
+           POSTER
+        ========================= */
+
+        .hero-poster {
+
+            width: 330px;
+
+            transform: rotate(3deg);
+
+            transition: 0.4s;
+        }
+
+
+        .hero-poster:hover {
+
+            transform: rotate(0deg) scale(1.04);
+        }
+
+
+        .hero-poster img {
+
+            width: 100%;
+
+            display: block;
+
+            border-radius: 15px;
+
+            border: 8px solid white;
+
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+        }
+
+
+        /* =========================
+           ABOUT SECTION
+        ========================= */
+
+        .about {
+
+            padding: 60px 10%;
+
+            text-align: center;
+
+            background-color: white;
+        }
+
+
+        .about h2 {
+
+            font-size: 35px;
+
+            color: #8b2f00;
+
+            margin-bottom: 20px;
+        }
+
+
+        .about p {
+
+            max-width: 850px;
+
+            margin: auto;
+
+            line-height: 1.8;
+
+            font-size: 17px;
+        }
+
+
+        /* =========================
+           MOVIE DETAILS
+        ========================= */
+
+        .details {
+
+            padding: 60px 10%;
+
+            text-align: center;
+
+            background-color: #fff7ed;
+        }
+
+
+        .details h2 {
+
+            font-size: 35px;
+
+            color: #8b2f00;
+
+            margin-bottom: 30px;
+        }
+
+
+        .details ul {
+
+            list-style: none;
+
+            max-width: 500px;
+
+            margin: auto;
+        }
+
+
+        .details li {
+
+            padding: 12px;
+
+            margin: 10px;
+
+            background-color: white;
+
+            border-radius: 10px;
+
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+
+        /* =========================
+           VIDEO SECTION
+        ========================= */
+
+        .video-section {
+
+            padding: 60px 8%;
+
+            text-align: center;
+
+            background-color: #2b1a12;
+
+            color: white;
+        }
+
+
+        .video-section h2 {
+
+            font-size: 35px;
+
+            margin-bottom: 30px;
+        }
+
+
+        .video-container {
+
+            max-width: 800px;
+
+            margin: auto;
+        }
+
+
+        iframe {
+
+            width: 100%;
+
+            height: 450px;
+
+            border: none;
+
+            border-radius: 15px;
+
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+
+        /* =========================
+           AUDIO SECTION
+        ========================= */
+
+        .audio-section {
+
+            padding: 50px 20px;
+
+            text-align: center;
+
+            background-color: #ffead8;
+        }
+
+
+        .audio-section h2 {
+
+            color: #8b2f00;
+
+            margin-bottom: 20px;
+        }
+
+
+        audio {
+
+            width: 400px;
+
+            max-width: 90%;
+        }
+
+
+        /* =========================
+           SMALL POSTER
+        ========================= */
+
+        .poster-section {
+
+            padding: 60px 8%;
+
+            text-align: center;
+
+            background-color: white;
+        }
+
+
+        .poster-section h2 {
+
+            font-size: 35px;
+
+            color: #8b2f00;
+
+            margin-bottom: 30px;
+        }
+
+
+        .small-poster-card {
+
+            max-width: 650px;
+
+            margin: auto;
+
+            padding: 20px;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 25px;
+
+            background-color: #fff7ed;
+
+            border-radius: 18px;
+
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+
+            text-align: left;
+        }
+
+
+        .small-poster-card img {
+
+            width: 150px;
+
+            height: 200px;
+
+            object-fit: cover;
+
+            border-radius: 10px;
+        }
+
+
+        .poster-info h3 {
+
+            font-size: 25px;
+
+            color: #8b2f00;
+
+            margin-bottom: 10px;
+        }
+
+
+        .poster-info p {
+
+            line-height: 1.6;
+
+            margin-bottom: 18px;
+        }
+
+
+        .poster-btn {
+
+            display: inline-block;
+
+            padding: 10px 18px;
+
+            background-color: #ff6b1a;
+
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 20px;
+
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           FORM SECTION
+        ========================= */
+
+        .subscribe {
+
+            padding: 70px 20px;
+
+            background: linear-gradient(
+                135deg,
+                #ff6b1a,
+                #ff9f43
+            );
+
+            text-align: center;
+        }
+
+
+        .subscribe h2 {
+
+            color: white;
+
+            font-size: 35px;
+
+            margin-bottom: 30px;
+        }
+
+
+        form {
+
+            width: 400px;
+
+            max-width: 90%;
+
+            margin: auto;
+
+            padding: 30px;
+
+            background-color: white;
+
+            border-radius: 15px;
+
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+
+            text-align: left;
+        }
+
+
+        form div {
+
+            margin-bottom: 20px;
+        }
+
+
+        label {
+
+            display: block;
+
+            font-weight: bold;
+
+            margin-bottom: 8px;
+
+            color: #3b0d0d;
+        }
+
+
+        input {
+
+            width: 100%;
+
+            padding: 12px;
+
+            border: 2px solid #ddd;
+
+            border-radius: 8px;
+
+            font-size: 15px;
+        }
+
+
+        input:focus {
+
+            border-color: #ff6b1a;
+
+            outline: none;
+        }
+
+
+        button {
+
+            width: 100%;
+
+            padding: 13px;
+
+            border: none;
+
+            border-radius: 8px;
+
+            background-color: #b30000;
+
+            color: white;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+
+        button:hover {
+
+            background-color: #ffcc00;
+
+            color: #222;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+
+            padding: 20px;
+
+            text-align: center;
+
+            background-color: #2b1a12;
+
+            color: white;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 768px) {
+
+            .hero {
+
+                flex-direction: column;
+
+                text-align: center;
+
+                padding: 50px 20px;
+            }
+
+
+            .hero-text {
+
+                width: 100%;
+
+                margin-bottom: 40px;
+            }
+
+
+            .hero h1 {
+
+                font-size: 45px;
+            }
+
+
+            .hero-poster {
+
+                width: 280px;
+            }
+
+
+            .small-poster-card {
+
+                flex-direction: column;
+
+                text-align: center;
+            }
+
+
+            iframe {
+
+                height: 250px;
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <p class="small-title">
+                A Bollywood Classic
+            </p>
+
+
+            <h1>
+                Munna Bhai<br>
+                MBBS
+            </h1>
+
+
+            <h2>
+                "Tension lene ka nahi,<br>
+                sirf dene ka!"
+            </h2>
+
+
+            <p class="intro">
+                A heartwarming comedy-drama about friendship,
+                humanity, medicine and the journey of Munna Bhai.
+            </p>
+
+
+            <a href="#about" class="explore-btn">
+                Explore Movie
+            </a>
+
+        </div>
+
+
+        <div class="hero-poster">
+
+            <img src="(1).jpeg"
+                alt="Munna Bhai MBBS Fan Art Poster"
+            >
+
+        </div>
+
+    </section>
+
+
+    <section class="about" id="about">
+
+        <h2>
+            About The Movie
+        </h2>
+
+
+        <p>
+            Munna Bhai M.B.B.S. is a Bollywood comedy-drama
+            that follows Munna Bhai as he enters medical college
+            and discovers that being a doctor is about more than
+            just studying medicine. The movie combines comedy,
+            friendship and an emotional story about humanity.
+        </p>
+
+    </section>
+
+
+    <section class="details">
+
+        <h2>
+            Movie Details
+        </h2>
+
+
+        <ul>
+
+            <li>
+                <strong>Release Year:</strong> 2003
+            </li>
+
+            <li>
+                <strong>Director:</strong> Rajkumar Hirani
+            </li>
+
+            <li>
+                <strong>Genre:</strong> Comedy - Drama
+            </li>
+
+            <li>
+                <strong>Language:</strong> Hindi
+            </li>
+
+        </ul>
+
+    </section>
+
+
+    <section class="video-section">
+
+        <h2>
+            Watch The Official Trailer
+        </h2>
+
+
+        <div class="video-container">
+
+            <iframe
+                src="https://www.youtube.com/embed/SVDPyZnP3cQ"
+                title="Munna Bhai MBBS Official Trailer"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+    </section>
+
+    <section class="audio-section">
+
+        <h2>
+            🎵 Movie Audio
+        </h2>
+
+
+        <audio controls>
+
+            <source
+                src="movie-audio.mp3"
+                type="audio/mpeg"
+            >
+
+            Your browser does not support the audio element.
+
+        </audio>
+
+    </section>
+    
+    <section class="poster-section">
+
+        <h2>
+            Munna Bhai MBBS Fan Art
+        </h2>
+
+
+        <div>
+
+
+            <img
+                src="(1).jpeg"
+                alt="Munna Bhai MBBS Poster"
+            >
+
+
+            <div class="poster-info">
+
+                <h3>
+                    Munna Bhai MBBS
+                </h3>
+
+
+                <p>
+                    A fan-art inspired poster celebrating
+                    the iconic movie.
+                </p>
+
+
+                <a class="poster-btn" >
+                    View Poster
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="subscribe">
+
+        <h2>
+            Subscribe For Updates
+        </h2>
+
+
+        <form action="/submit.php">
+
+            <div>
+
+                <label for="name">
+                    Name
+                </label>
+
+                <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    placeholder="Enter your name"
+                    required
+                >
+
+            </div>
+
+
+            <div>
+
+                <label for="email">
+                    Email
+                </label>
+
+                <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+            </div>
+
+
+            <div>
+
+                <button type="submit">
+                    Subscribe For Updates
+                </button>
+
+            </div>
+
+        </form>
+
+    </section>
+
+
+    <footer>
+
+        <p>
+            © 2026 Munna Bhai MBBS Fan Page
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
