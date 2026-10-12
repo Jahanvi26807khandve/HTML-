@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 900px;
+            border: 2px solid #333;
+            border-radius: 12px;
+             background-color: #fff;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+
+        header {
+            background-color: #ffccd5;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #333;
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff4d6d;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        nav a {
+            color: #333;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        nav :hover {
+            color: #ff4d6d;
+        }
+
+        .login-btn {
+            background-color: #ffe5ec;
+            border: 2px solid #ff4d6d;
+            padding: 8px 16px;
+            border-radius: 20px;
+            color: #ff4d6d;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .login-btn:hover {
+            background-color: #ff4d6d;
+            color: #fff;
+        }
+
+
+        .content-area {
+            display: flex;
+            flex: 3;
+            min-height: 400px;
+        }
+
+
+        .sidebar {
+            background-color: #e0f2fe;
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            color: #0369a1;
+            text-transform: uppercase;
+        }
+
+        .left-sidebar {
+            border-right: 2px solid #333;
+        }
+
+        .right-sidebar {
+            border-left: 2px solid #333;
+        }
+
+        main {
+            background-color: #f6b6c2;
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <header>
+            <div class="title">Title</div>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+                <button class="login-btn">Login</button>
+            </nav>
+        </header>
+
+
+        <div class="content-area">
+
+            <aside class="sidebar left-sidebar"> </aside>
+
+            <main> </main>
+
+            <aside class="sidebar right-sidebar">
+
+            </aside>
+        </div>
+
+
+        <footer>
+
+        </footer>
+    </div>
+</body>
+
+</html>

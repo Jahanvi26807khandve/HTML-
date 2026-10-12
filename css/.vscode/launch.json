@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/jahanvi/Documents/nebula heart",
+      "program": "/Users/jahanvi/Documents/nebula heart/build/Debug/outDebug"
+    },
+    {
+      "type": "chrome",
+      "name": "http://127.0.0.1:3000/basic.html/unit2.html",
+      "request": "launch",
+      "url": "http://127.0.0.1:3000/basic.html/unit2.html"
+    }
+  ]
+}
